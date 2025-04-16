@@ -1,42 +1,285 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+#navbar{
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+#navUL{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+li{
+    list-style: none;
+    font-size: 25px;
+    font-weight: bolder;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+li:hover{
+    color: orange;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#navbar>img{
+    margin-left: 40px;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+marquee{
+    height: 70px;
+    width: 100%;
+    background-image: linear-gradient(to left,rgb(255, 247, 0),rgb(0, 255, 13));
+    color:blue;
+    font-size: 30px;
+} 
+.link{
+    text-decoration: none;
+    color: aliceblue;
+}
+.link:hover{
+    color: orange;
+}
+/* //......................................... */
+/* Login.css - Black & White Theme */
+body {
+    background-color: #000000d2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .login-container {
+    width: 320px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #000;
+    border: 1px solid white;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  .login-container h2 {
+    margin-bottom: 20px;
+    color: white;
   }
-}
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .login-form input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid white;
+    background-color: #000;
+    color: white;
+  }
+  
+  .login-form input::placeholder {
+    color: #ccc;
+  }
+  
+  .login-form button {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .login-form button:hover {
+    background-color: #ccc;
+    color: #000;
+  }
+  
+/* ..............................................................   */
+  /* Signup.css - Black & White Theme */
+body {
+    background-color: #000000b2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .signup-container {
+    width: 320px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #000;
+    border: 1px solid white;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  }
+  
+  .signup-container h2 {
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .signup-form input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid white;
+    background-color: #000;
+    color: white;
+  }
+  
+  .signup-form input::placeholder {
+    color: #ccc;
+  }
+  
+  .signup-form button {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .signup-form button:hover {
+    background-color: #ccc;
+    color: #000;
+  }
+  /* ................................................. */
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.722);
+    color: white;
+    padding: 20px;
+  }
+  
+  .product-card {
+    width: 220px;
+    margin: 15px;
+    background-color: rgba(0, 0, 0, 0.722);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px white;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  .product-card button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .product-card button:hover {
+    background-color: #ddd;
+  }
+  /* ....................................................... */
+  
+  .cart-container {
+    background-color: rgba(0, 0, 0, 0.722);
+    color: white;
+    padding: 30px;
+    min-height: 100vh;
+  }
+  
+  .cart-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.722);
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 8px;
+    max-width: 500px;
+    box-shadow: 0 0 10px white;
+  }
+  
+  .cart-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 6px;
+  }
+  .payment-steps {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payment-steps h2 {
+    margin-bottom: 20px;
+  }
+  
+  .payment-steps ol {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  
+  .payment-steps p {
+    margin-top: 20px;
+    color: #666;
+  }
+  /* ........................................ */
+  #row1{
+    height: 350px;
+    width: 100%;
+    background-image: linear-gradient(to right,black,gray);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
-}
+  }
+  #row2{
+    height: 350px;
+    width: 100%;
+   background-image: linear-gradient(to left,black,gray);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+
+
+  }
+
+  #row1 img{
+    border-radius: 20%;
+  }
+  #row2 img{
+    border-radius: 20%;
+  }

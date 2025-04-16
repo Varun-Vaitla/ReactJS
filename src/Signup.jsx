@@ -1,22 +1,22 @@
 
 import React, { useState } from 'react';
-import Navbar from './Navbar';
-
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSignup = (e) => {
     e.preventDefault();
-    console.log('Signup data:', { username, email, password });
-    // Add your signup logic here
+    const userData = { username, email, password };
+    localStorage.setItem('signupData', JSON.stringify(userData));
+    alert('Signup successful! Please login.');
+    navigate('/login');
   };
 
   return (
-    <div>
-        <Navbar></Navbar>
     <div className="signup-container">
       <h2>PUMA Signup</h2>
       <form onSubmit={handleSignup} className="signup-form">
@@ -47,8 +47,8 @@ const Signup = () => {
         <button type="submit">Signup</button>
       </form>
     </div>
-    </div>
   );
 };
 
 export default Signup;
+
