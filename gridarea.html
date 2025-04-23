@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #grid-container{
+        background: linear-gradient(to left , orchid, skyblue);
+        height: 500px;
+        width: 80%;
+        display: grid;
+        grid-template-areas: "hdr hdr hdr hdr hdr"
+                             "hdr hdr hdr hdr hdr"
+                             "nav nav nav nav nav"
+                             "min min min sec sec"
+                             "min min min sec sec"
+                             "min min min art art"
+                             "min min min art art"
+                             "ftr ftr ftr ftr ftr"
+                             "ftr ftr ftr ftr ftr";
+    gap: 10px;
+    margin: 50px auto;
+    padding: 10px;
+    }
+    .items{
+        background-color: black;
+        border: 1px solid blue;
+        color: white;
+    }
+    #grid-items1{
+        grid-area: hdr;
+        text-align: center;
+    }
+    #grid-items1>p{
+        height: 20px;
+        width: 70%;
+        text-align: justify;
+        margin: 0 auto;
+        padding: 10px 0 0;
+    }
+    #grid-items2{
+        grid-area: nav;
+    }
+    #grid-items3{
+        grid-area: min;
+        display: grid;
+        grid-template-areas: "abc abc xyz xyz"
+                             "abc abc xyz xyz"
+                             "mno mno pqr pqr"
+                             "mno mno pqr pqr";
+                             gap: 5px;
+    }
+    .b3item{
+        background-color: rebeccapurple;
+        border: 1px solid goldenrod;
+    }
+    #box3-item1{
+        grid-area: abc;
+        background-image: url(asta1.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    #box3-item2{
+        grid-area: xyz;
+        background-image: url(asta);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    #box3-item3{
+        grid-area: mno;
+        background-image: url(background1);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    #box3-item4{
+        grid-area: pqr;
+        background-image: url(background);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    #grid-items4{
+        grid-area: sec;
+        width: 70%;
+        /* align-self: center;
+        justify-self: end; */
+        place-self: center;
+    }
+    #grid-items5{
+        grid-area: art;
+    }
+    #grid-items6{
+        grid-area: ftr;
+    }
+</style>
+<body>
+    <div id="grid-container">
+        <div id="grid-items1" class="items">
+            <h1>grid-boxes1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde deserunt non, commodi voluptates, dolorem quia eligendi aliquam corrupti iure possimus eum quos. Ex, enim dicta distinctio magnam aut labore repellendus ratione maiores cupiditate dolor at optio beatae, delectus itaque.</p>
+        </div>
+        <div id="grid-items2" class="items">grid-boxes2</div>
+        <div id="grid-items3" class="items">
+            <div id="box3-item1" class="b3item">box3-item1</div>
+            <div id="box3-item2" class="b3item">box3-item2</div>
+            <div id="box3-item3" class="b3item">box3-item3</div>
+            <div id="box3-item4" class="b3item">box3-item4</div>
+        </div>
+        <div id="grid-items4" class="items">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia culpa voluptatibus in mollitia voluptatem illo minus sed deserunt eveniet officiis!</p>
+        </div>
+        <div id="grid-items5" class="items">grid-boxes5</div>
+        <div id="grid-items6" class="items">grid-boxes6</div>
+    </div>
+</body>
+</html>

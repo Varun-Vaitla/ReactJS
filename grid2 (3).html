@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 2</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    #grid-container{
+        height: 500px;
+        width: 70%;
+        background-color: black;
+        display: grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-rows:  33.33% 33.33% 33.33% ;
+
+    }
+    .c-items{
+        background-color: orange;
+        border: 2px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #con-items1{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    #con-items2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    #con-items3{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    #con-items4{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+    }
+</style>
+<body>
+    <div id="grid-container">
+        <div id="con-items1" class="c-items">items1</div>
+        <div id="con-items2" class="c-items">items2</div>
+        <div id="con-items3" class="c-items">items3</div>
+        <div id="con-items4" class="c-items">items4</div>
+    </div>
+</body>
+</html>
